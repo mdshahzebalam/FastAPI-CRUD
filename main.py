@@ -15,8 +15,10 @@ app = FastAPI()
 
 @app.post("/items/")
 async def create_item(item: Item | None = None):
+    temp = item
 
-    return item
+
+    return temp
 
 @app.get("/items/")
 async def read_items(q: Annotated[str | None, Query(min_length=3)] = ...):
