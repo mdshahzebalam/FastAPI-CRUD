@@ -12,6 +12,7 @@ app = FastAPI()
 
 @app.post("/items/")
 async def create_item(item: Item | None = None):
+    
     return item
 
 @app.get("/items/")
